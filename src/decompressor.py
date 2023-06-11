@@ -22,9 +22,11 @@ from keras.models import Sequential
 from keras.models import model_from_json
 from keras.layers import Dense
 from keras.layers import LSTM, Flatten, CuDNNLSTM
-from keras.layers.embeddings import Embedding
+## from keras.layers.embeddings import Embedding
+from tensorflow.keras.layers import Embedding
 from keras.models import load_model
-from keras.layers.normalization import BatchNormalization
+##from keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers import BatchNormalization
 import tensorflow as tf
 import numpy as np
 import argparse
