@@ -4,13 +4,16 @@ from keras.models import Sequential
 from keras.layers import Dense, Bidirectional
 from keras.layers import LSTM, Flatten, Conv1D, LocallyConnected1D, CuDNNLSTM, CuDNNGRU, MaxPooling1D, GlobalAveragePooling1D, GlobalMaxPooling1D
 from math import sqrt
-from keras.layers.embeddings import Embedding
+##from keras.layers.embeddings import Embedding
+from tensorflow.keras.layers import Embedding
 from keras.callbacks import ModelCheckpoint
 # from matplotlib import pyplot
 import keras
 from sklearn.preprocessing import OneHotEncoder
-from keras.layers.normalization import BatchNormalization
-from keras.layers.advanced_activations import ELU
+##from keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers.import BatchNormalization
+##from keras.layers.advanced_activations import ELU
+from tensorflow.keras.layers import ELU
 import tensorflow as tf
 import numpy as np
 import argparse

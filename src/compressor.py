@@ -22,9 +22,11 @@ from keras.models import Sequential
 from keras.models import model_from_json
 from keras.layers import Dense
 from keras.layers import LSTM, Flatten, CuDNNLSTM
-from keras.layers.embeddings import Embedding
+## from keras.layers.embeddings import Embedding
+from tensorflow.keras.layers import Embedding
 from keras.models import load_model
-from keras.layers.normalization import BatchNormalization
+## from keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers import BatchNormalization
 import tensorflow as tf
 import numpy as np
 import argparse
@@ -170,7 +172,7 @@ def main():
                 enc = arithmeticcoding_fast.ArithmeticEncoder(32, bitout) 
                 prob = np.ones(alphabet_size)/alphabet_size
                 
-                cumul = np.zeros(alphabet_size+1, dtype = np.uint64)
+                cumul = np.zeros(alphabet_size+2, dtype = np.uint64)
                 cumul[1:] = np.cumsum(prob*10000000 + 1)        
                 for j in range(l, len(series)):
                         enc.write(cumul, series[j])
